@@ -3,10 +3,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import CreateTodo from "./components/create-todo.component";
-import EditTodo from "./components/edit-todo.component";
-import TodosList from "./components/todos-list.component";
 import DeliveryNotesList from "./components/deliverynotes-list.component";
+import RecallItemsList from "./components/recalls-list.component";
 
 class App extends Component {
   render() {
@@ -14,23 +12,24 @@ class App extends Component {
       <Router>
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="images/coop-logo.svg"/>
             <Link to="/" className="navbar-brand">Co-op News & Mags - Store Webapp</Link>
+          </nav>
+          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
                   <Link to="/" className="nav-link">Delivery</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/create" className="nav-link">Create Todo</Link>
+                  <Link to="/recalls" className="nav-link">Recalls</Link>
                 </li>
               </ul>
             </div>
           </nav>
           <br/>
           <Route path="/" exact component={DeliveryNotesList} />
-          <Route path="/todos" exact component={TodosList} />
-          <Route path="/edit/:id" component={EditTodo} />
-          <Route path="/create" component={CreateTodo} />
+          <Route path="/recalls" exact component={RecallItemsList} />
         </div>
       </Router>
     );

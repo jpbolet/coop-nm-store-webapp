@@ -11,9 +11,6 @@ const DeliveryNote = props => (
         <td>{props.deliverynote.BARCODE_ISSUE_EXTENSION}</td>
         <td>{props.deliverynote.ALLOCATION_QTY}</td>
         <td>{props.deliverynote.DELIVERY_QTY}</td>
-        <td>
-            <Link to={"/edit/"+props.deliverynote._id}>Edit</Link>
-        </td>
     </tr>
 )
 
