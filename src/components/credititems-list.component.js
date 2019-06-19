@@ -10,7 +10,7 @@ const CreditItem = props => (
         <td>{props.credititem.NET_VALUE}</td>
         <td>{props.credititem.REJECT_REASON}</td>
         <td>{props.credititem.RECHARGE_FLAG}</td>
-        <td>{props.credititem.ITEM_TYPE == "MG" ? "Magazine" : "Newspaper"}</td>
+        <td>{props.credititem.ITEM_TYPE === "MG" ? "Magazine" : "Newspaper"}</td>
     </tr>
 )
 

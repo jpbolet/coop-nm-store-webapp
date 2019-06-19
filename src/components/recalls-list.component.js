@@ -8,7 +8,7 @@ const RecallItem = props => (
         <td>{props.recallitem.ISSUE}</td>
         <td>{props.recallitem.MATNR}</td>
         <td>{props.recallitem.DELIVERY_QTY}</td>
-        <td>{props.recallitem.ITEM_TYPE == "MG" ? "Magazine" : "Newspaper"}</td>
+        <td>{props.recallitem.ITEM_TYPE === "MG" ? "Magazine" : "Newspaper"}</td>
     </tr>
 )
 

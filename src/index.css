@@ -13,6 +13,11 @@ code {
     monospace;
 }
 
-.is_new {
+.coop-blue {
   background-color: #00b1e7;
+}
+
+.weekly-news {
+  border: solid 1px;
+  padding: 10px;
 }
