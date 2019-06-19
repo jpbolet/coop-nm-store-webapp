@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const DeliveryNote = props => (
@@ -40,7 +39,7 @@ export default class DeliveryNotesList extends Component {
     render() {
         return (
             <div>
-                <h3>DeliveryNotes List</h3>
+                <h3>Delivery Notes</h3>
                 <table className="table table-striped" style={{ marginTop: 20 }} >
                     <thead>
                         <tr>
@@ -49,8 +48,8 @@ export default class DeliveryNotesList extends Component {
                             <th>Issue</th>
                             <th>Barcode</th>
                             <th>extn.</th>
-                            <th>Allocation Quantity</th>
-                            <th>Delivery Quantity</th>
+                            <th>Allocation qty</th>
+                            <th>Delivery qty</th>
                         </tr>
                     </thead>
                     <tbody>

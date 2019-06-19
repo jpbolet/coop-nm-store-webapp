@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const RecallItem = props => (
@@ -9,7 +8,7 @@ const RecallItem = props => (
         <td>{props.recallitem.ISSUE}</td>
         <td>{props.recallitem.MATNR}</td>
         <td>{props.recallitem.DELIVERY_QTY}</td>
-        <td>{props.recallitem.ITEM_TYPE}</td>
+        <td>{props.recallitem.ITEM_TYPE == "MG" ? "Magazine" : "Newspaper"}</td>
     </tr>
 )
 
@@ -39,7 +38,7 @@ export default class RecallItemsList extends Component {
     render() {
         return (
             <div>
-                <h3>RecallItems List</h3>
+                <h3>Recall Items</h3>
                 <table className="table table-striped" style={{ marginTop: 20 }} >
                     <thead>
                         <tr>
