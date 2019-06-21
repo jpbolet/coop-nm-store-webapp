@@ -15,9 +15,14 @@ code {
 
 .coop-blue {
   background-color: #00b1e7;
+  padding: 10px;
 }
 
 .weekly-news {
   border: solid 1px;
   padding: 10px;
+}
+
+.logo-image {
+  padding-right: 15px;
 }

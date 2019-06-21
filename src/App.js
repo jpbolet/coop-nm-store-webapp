@@ -14,7 +14,7 @@ class App extends Component {
       <Router>
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <img src="images/coop-logo.svg" alt="Co-op logo"/>
+            <img src="images/coop-logo.svg" alt="Co-op logo" className="logo-image"/>
             <Link to="/" className="navbar-brand">Co-op News & Mags - Store Webapp</Link>
           </nav>
           <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

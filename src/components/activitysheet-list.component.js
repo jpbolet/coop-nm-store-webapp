@@ -8,24 +8,9 @@ const ActivitySheetItem = props => (
         <td>{props.activitysheetitem.placement.type}</td>
         <td>{props.activitysheetitem.placement.location}</td>
         <td>{props.activitysheetitem.publication.type}</td>
-        <td>{props.activitysheetitem.is_new ? "New" : ""}</td>
+        <td>{props.activitysheetitem.is_new ? "I'm New!" : ""}</td>
     </tr>
 )
-
-function formatDate(date) {
-  var dd = date.getDate();
-  var mm = date.getMonth()+1;
-  var yyyy = date.getFullYear();
-  if(dd<10)
-  {
-    dd='0'+dd;
-  }
-  if(mm<10)
-  {
-    mm='0'+mm;
-  }
-  return yyyy + '-' + mm + '-' + dd;
-}
 
 export default class ActivitySheetItemsList extends Component {
 
@@ -63,7 +48,9 @@ export default class ActivitySheetItemsList extends Component {
                 <b>Week { this.state.week }</b><p>{this.state.range_start_date} until {this.state.range_end_date}</p>
                 <div className='weekly-news'><b>Weekly News</b>
                 <p>{ this.state.weekly_news }</p></div>
-                <p className='coop-blue'><b>New Title</b> All new titles that should come in this week will now be highlighted in blue and indicated in the box on the left. If indicated, simply place the new title in the slot designated and return any titles specified at the end of the sheet</p>
+                <div className='coop-blue'><b>New Title</b><p>All new titles that should come in this week will now be highlighted in blue. If indicated, simply place the new title in the slot designated and return any titles specified at the end of the sheet</p></div>
+
+
 
                 <table className="table table-striped" style={{ marginTop: 20 }} >
                     <thead>
@@ -73,7 +60,7 @@ export default class ActivitySheetItemsList extends Component {
                             <th>Placement Type</th>
                             <th>Location</th>
                             <th>Item Type</th>
-                            <th>Is New</th>
+                            <th>New</th>
                         </tr>
                     </thead>
                     <tbody>
